@@ -2,7 +2,7 @@
 Vim syntax plugin for IVy
 
 This is a Vim syntax plugin for the [IVy][ivy] language, styled after its
-[Emacs major mode][emacs].
+[Emacs major mode][emacs] and the [language lexer][lexer].
 
 ## Installation
 
@@ -33,6 +33,7 @@ MIT: See the LICENCE file for details.
 
 [emacs]: https://github.com/kenmcmil/ivy/blob/master/lib/emacs/ivy-mode.el
 [ivy]: https://microsoft.github.io/ivy/
+[lexer]: https://github.com/microsoft/ivy/blob/master/ivy/ivy_lexer.py
 [p]: https://github.com/tpope/vim-pathogen
 [v]: https://github.com/gmarik/vundle
 [vp]: https://github.com/junegunn/vim-plug
