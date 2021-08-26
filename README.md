@@ -21,7 +21,7 @@ This is a Vim syntax plugin for the [IVy][ivy] language, styled after its
 1. Add `Plug 'dijkstracula/vim-ivy' to your e.g. `~/.config/nvim/plugins.vim`
 2. Run `:PlugInstall`
 
-TODO: actually test Vundle and Pathogen install paths.
+TODO: actually test Vundle and Pathogen install paths; they were stolen from elsewhere.
 
 ## Contributing
 
@@ -29,7 +29,8 @@ PRs welcome - this is definitely a work in progress.
 
 ## Licence
 
-MIT: See the LICENCE file for details.
+Copyright (c) 2001 Nathan Taylor; licenced under MIT: See the LICENSE file for
+details.
 
 [emacs]: https://github.com/kenmcmil/ivy/blob/master/lib/emacs/ivy-mode.el
 [ivy]: https://microsoft.github.io/ivy/
