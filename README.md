@@ -18,8 +18,8 @@ This is a Vim syntax plugin for the [IVy][ivy] language, styled after its
 
 ## Using NeoVim and [Vim-Plug][vp]
 
-1. Add `Plug 'dijkstracula/vim-ivy' to your e.g. `~/.config/nvim/plugins.vim`
-2. Run `:PlugInstall`
+1. Add `Plug 'dijkstracula/vim-ivy'` to your e.g. `~/.config/nvim/plugins.vim`
+2. Save and run `:PlugInstall`
 
 TODO: actually test Vundle and Pathogen install paths; they were stolen from elsewhere.
 
