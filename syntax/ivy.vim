@@ -1,6 +1,6 @@
 " Match typenames.
 syntax keyword ivyTypes bool int bv
-highlight link ivyTypes Type
+hi def link ivyTypes Type
 
 " Match reserved words.
 syntax keyword ivyKeywords 
@@ -112,16 +112,18 @@ syntax keyword ivyKeywords
     \ unfold 
     \ forget 
 
-highlight link ivyKeywords Keyword
+hi def link ivyKeywords Keyword
+
 
 " Match pound until the EOL as a comment.
 " (I don't know why `commentstring` isn't picking this up?)
-syntax match ivyComment "\v#.*$"
-highlight link ivyComment Comment
+syntax match ivyComment "\#.*$"
+hi def link ivyComment Comment
+
 
 " Operators.  Boy it would have been nice if `syntax keyword` would
 " have worked on these!
-syntax match ivyOperator "\v~"
+syntax match ivyOperator "\v\~"
 syntax match ivyOperator "\v\,"
 syntax match ivyOperator "\v\+"
 syntax match ivyOperator "\v\*"
@@ -146,30 +148,20 @@ syntax match ivyOperator "\v\^"
 " Larger matches should come before smaller ones so the tokenizer can
 " greedily eat as much as it can; so, this is slightly out of order from
 " ivy_lexer.py unfortunately.
-syntax match ivyOperator "\v;"
-syntax match ivyOperator "\v:"
+syntax match ivyOperator "\v\;"
+syntax match ivyOperator "\v\:"
 syntax match ivyOperator "\v\-"
 syntax match ivyOperator "\v\<"
 syntax match ivyOperator "\v\="
 syntax match ivyOperator "\v\{"
 syntax match ivyOperator "\v\}"
 
-highlight link ivyOperator Operator
+hi def link ivyOperator Operator
 
-" The big hunk ol' meat: the indentation function.
-" Currently only handles curly braces but the emacs mode also indents
-" on square ones (I think?).
-setlocal indentexpr=IvyIndent()
 
-function! IvyIndent()
-  let line = getline(v:lnum)
-  let previousNum = prevnonblank(v:lnum - 1)
-  let previous = getline(previousNum)
+" Numbers
+" TODO: what are IVy's numeric types?
+syntax match ivyNumber "\v<\d+>"
+hi def link ivyNumber Number
 
-  if previous =~ "{" && previous !~ "}" && line !~ "}" && line !~ ":$"
-    return indent(previousNum) + &tabstop
-  endif
-
-  ...
-endfunction
-
+" TODO: strings?
