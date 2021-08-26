@@ -119,6 +119,46 @@ highlight link ivyKeywords Keyword
 syntax match ivyComment "\v#.*$"
 highlight link ivyComment Comment
 
+" Operators.  Boy it would have been nice if `syntax keyword` would
+" have worked on these!
+syntax match ivyOperator "\v~"
+syntax match ivyOperator "\v\,"
+syntax match ivyOperator "\v\+"
+syntax match ivyOperator "\v\*"
+syntax match ivyOperator "\v\/"
+syntax match ivyOperator "\v\<\="
+syntax match ivyOperator "\v\>"
+syntax match ivyOperator "\v\>\="
+syntax match ivyOperator "\v\*\>"
+syntax match ivyOperator "\v\("
+syntax match ivyOperator "\v\)"
+syntax match ivyOperator "\v\|"
+syntax match ivyOperator "\v\&"
+syntax match ivyOperator "\v\~\="
+syntax match ivyOperator "\v:\="
+syntax match ivyOperator "\v\-\>"
+syntax match ivyOperator "\v\<\-\>"
+syntax match ivyOperator "\v\.\.\."
+syntax match ivyOperator "\v\.\."
+syntax match ivyOperator "\v\$"
+syntax match ivyOperator "\v\^"
+
+" Larger matches should come before smaller ones so the tokenizer can
+" greedily eat as much as it can; so, this is slightly out of order from
+" ivy_lexer.py unfortunately.
+syntax match ivyOperator "\v;"
+syntax match ivyOperator "\v:"
+syntax match ivyOperator "\v\-"
+syntax match ivyOperator "\v\<"
+syntax match ivyOperator "\v\="
+syntax match ivyOperator "\v\{"
+syntax match ivyOperator "\v\}"
+
+highlight link ivyOperator Operator
+
+" The big hunk ol' meat: the indentation function.
+" Currently only handles curly braces but the emacs mode also indents
+" on square ones (I think?).
 setlocal indentexpr=IvyIndent()
 
 function! IvyIndent()
