@@ -6,8 +6,6 @@ This is a Vim syntax plugin for the [IVy][ivy] language, styled after its
 
 ## Installation
 
-TODO: actually test this!  But, in theory:
-
 ### Using [Vundle][v]
 
 1. Add `Plugin 'dijkstracula/vim-ivy.vim'` to `~/.vimrc`
@@ -17,6 +15,13 @@ TODO: actually test this!  But, in theory:
 
 1. `cd ~/.vim/bundle`
 2. `git clone https://github.com/dijkstracula/vim-ivy.git`
+
+## Using NeoVim and [Vim-Plug][vp]
+
+1. Add `Plug 'dijkstracula/vim-ivy' to your e.g. `~/.config/nvim/plugins.vim`
+2. Run `:PlugInstall`
+
+TODO: actually test Vundle and Pathogen install paths.
 
 ## Contributing
 
@@ -30,3 +35,4 @@ MIT: See the LICENCE file for details.
 [ivy]: https://microsoft.github.io/ivy/
 [p]: https://github.com/tpope/vim-pathogen
 [v]: https://github.com/gmarik/vundle
+[vp]: https://github.com/junegunn/vim-plug
