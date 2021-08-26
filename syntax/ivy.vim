@@ -2,18 +2,21 @@
 syntax keyword ivyTypes bool int bv
 highlight link ivyTypes Type
 
-" Match keywords.
+" Match reserved words.
 syntax keyword ivyKeywords 
     \ relation 
+    \ individual 
+    \ function 
     \ axiom 
     \ conjecture 
-    \ individual 
     \ schema 
     \ instantiate 
+    \ instance 
     \ derived 
     \ concept 
     \ init 
     \ action 
+    \ method 
     \ state 
     \ assume 
     \ assert 
@@ -32,6 +35,8 @@ syntax keyword ivyKeywords
     \ false 
     \ fresh 
     \ module 
+    \ object 
+    \ class 
     \ type 
     \ if 
     \ else 
@@ -45,6 +50,7 @@ syntax keyword ivyKeywords
     \ exists 
     \ returns 
     \ mixin 
+    \ execute 
     \ before 
     \ after 
     \ isolate 
@@ -52,23 +58,18 @@ syntax keyword ivyKeywords
     \ export 
     \ delegate 
     \ import 
+    \ using 
     \ include 
     \ progress 
     \ rely 
     \ mixord 
     \ extract 
-    \ function 
-    \ class 
-    \ object 
-    \ method 
-    \ execute 
     \ destructor 
     \ some 
     \ maximizing 
-    \ maximizing 
+    \ minimizing 
     \ private 
     \ implement 
-    \ using 
     \ property 
     \ while 
     \ invariant 
@@ -79,25 +80,37 @@ syntax keyword ivyKeywords
     \ trusted 
     \ this 
     \ var 
-    \ instance 
     \ attribute 
     \ variant 
     \ of 
+    \ scenario 
     \ proof 
+    \ named 
+    \ fresh 
+    \ temporal 
+    \ globally 
+    \ eventually 
+    \ decreases 
     \ specification 
     \ implementation 
-    \ decreases 
-    \ require 
     \ ensure 
+    \ require 
     \ around 
     \ parameter 
-    \ autoinstance 
-    \ temporal 
-    \ tactic 
-    \ theorem 
     \ apply 
-    \ named 
-    \ global 
-    \ process 
+    \ theorem 
+    \ showgoals 
+    \ defergoal 
+    \ spoil 
+    \ explicit 
+    \ thunk 
+    \ isa 
+    \ autoinstance 
+    \ constructor 
+    \ finite 
+    \ tactic 
+    \ unfold 
+    \ forget 
+
 highlight link ivyKeywords Keyword
 
