@@ -114,6 +114,11 @@ syntax keyword ivyKeywords
 
 highlight link ivyKeywords Keyword
 
+" Match pound until the EOL as a comment.
+" (I don't know why `commentstring` isn't picking this up?)
+syntax match ivyComment "\v#.*$"
+highlight link ivyComment Comment
+
 setlocal indentexpr=IvyIndent()
 
 function! IvyIndent()
