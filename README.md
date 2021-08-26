@@ -1,7 +1,7 @@
 # vim-ivy
 Vim syntax plugin for IVy
 
-This is a Vim syntax plugin for the [IVy][ivy], styled after the
+This is a Vim syntax plugin for the [IVy][ivy] language, styled after its
 [Emacs major mode][emacs].
 
 ## Installation
