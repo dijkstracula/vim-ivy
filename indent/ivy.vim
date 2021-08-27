@@ -9,7 +9,6 @@ function! IvyIndent() abort
     let thisl = substitute(getline(v:lnum), '\v#.*$', '', '')
     let prevl = substitute(getline(prevlnum), '\v#.*$', '', '')
 
-    echomsg thisl
     let ind = indent(prevlnum)
     if prevl =~ '[[{]\s*$'
         " previous line opened a block
@@ -23,4 +22,3 @@ function! IvyIndent() abort
     return ind
 
 endfunction
-
