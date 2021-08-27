@@ -29,7 +29,7 @@ PRs welcome - this is definitely a work in progress.
 
 ## Licence
 
-Copyright (c) 2001 Nathan Taylor; licenced under MIT: See the LICENSE file for
+Copyright (c) 2021 Nathan Taylor; licenced under MIT: See the LICENSE file for
 details.
 
 [emacs]: https://github.com/kenmcmil/ivy/blob/master/lib/emacs/ivy-mode.el
