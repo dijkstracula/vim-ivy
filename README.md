@@ -8,7 +8,7 @@ This is a Vim syntax plugin for the [IVy][ivy] language, styled after its
 
 ### Using [Vundle][v]
 
-1. Add `Plugin 'dijkstracula/vim-ivy.vim'` to `~/.vimrc`
+1. Add `Plugin 'dijkstracula/vim-ivy'` to `~/.vimrc`
 2. `vim +PluginInstall +qall`
 
 ### Using [Pathogen][p]
