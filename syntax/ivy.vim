@@ -165,9 +165,18 @@ syntax match ivyNumber "\v<\d+>"
 hi def link ivyNumber Number
 
 " Logical variables
-" "in Ivy, as in Prolog, identifiers beginning with capital letters are
-" logical variables, or place-holders.'
+"     'in Ivy, as in Prolog, identifiers beginning with capital letters are
+"     logical variables, or place-holders.'
 syntax match logicalVar "\v\u+\a*"
 hi def link logicalVar Identifier
 
-" TODO: strings?
+" Quoted symbols
+"     'A quoted symbol is a possibly-empty sequence of characters enclosed in
+"     double quote characters (and not containing a double quote character).'
+" (As a result, we don't have to match for an escaped double-quote character.)
+syntax region quotedSymbol start=/\v"/ end=/\v"/
+highlight link quotedSymbol String
+
+" Native quote
+" TODO: Not sure yet how <<<...>>> is used.  At least we might want to be able
+" to fold them.
