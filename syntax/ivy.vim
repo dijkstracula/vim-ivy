@@ -164,4 +164,10 @@ hi def link ivyOperator Operator
 syntax match ivyNumber "\v<\d+>"
 hi def link ivyNumber Number
 
+" Logical variables
+" "in Ivy, as in Prolog, identifiers beginning with capital letters are
+" logical variables, or place-holders.'
+syntax match logicalVar "\v\u+\a*"
+hi def link logicalVar Identifier
+
 " TODO: strings?
