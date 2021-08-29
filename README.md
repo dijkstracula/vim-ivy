@@ -21,7 +21,7 @@ This is a Vim syntax plugin for the [IVy][ivy] language, styled after its
 1. Add `Plug 'dijkstracula/vim-ivy'` to your e.g. `~/.config/nvim/plugins.vim`
 2. Save and run `:PlugInstall`
 
-TODO: actually test Vundle and Pathogen install paths; they were stolen from elsewhere.
+TODO: actually test Pathogen install commands; they were stolen from elsewhere.
 
 ## Contributing
 
