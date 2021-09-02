@@ -12,4 +12,6 @@ if exists(":CompilerSet") != 2
 endif
 
 CompilerSet makeprg=ivy_check\ %\ \\\|\ grep\ ':\ error:\ '
-CompilerSet errorformat=%f(%l):\ error:\ %m
+CompilerSet errorformat=
+    \%f(%l):\ error:\ %m,
+    \%f:\ line\ %l:\ error:\ %m
