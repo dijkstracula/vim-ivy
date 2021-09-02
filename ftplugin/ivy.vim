@@ -8,3 +8,8 @@ setlocal tabstop=4
 setlocal softtabstop=4
 setlocal shiftwidth=4
 
+compiler ivy
+
+" Run ivy_check on save. (Maybe this should be an option?)
+" NBT: Disabling for the moment as it's synchronous and annoying...
+"autocmd BufWritePost <buffer> make
