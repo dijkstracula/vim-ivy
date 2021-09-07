@@ -4,6 +4,8 @@ Vim syntax plugin for IVy
 This is a Vim syntax plugin for the [IVy][ivy] language, styled after its
 [Emacs major mode][emacs] and the [language lexer][lexer].
 
+![](example.png)
+
 ## Installation
 
 ### Using [Vundle][v]
