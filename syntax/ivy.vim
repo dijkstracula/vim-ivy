@@ -167,7 +167,7 @@ hi def link ivyNumber Number
 " Logical variables
 "     'in Ivy, as in Prolog, identifiers beginning with capital letters are
 "     logical variables, or place-holders.'
-syntax match logicalVar "\v\u+\a*"
+syntax match logicalVar "\v\u(\d|\h)*\a*"
 hi def link logicalVar Identifier
 
 " Quoted symbols
