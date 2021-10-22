@@ -36,7 +36,7 @@ details.
 
 [emacs]: https://github.com/kenmcmil/ivy/blob/master/lib/emacs/ivy-mode.el
 [ivy]: https://microsoft.github.io/ivy/
-[lexer]: https://github.com/microsoft/ivy/blob/master/ivy/ivy_lexer.py
+[lexer]: https://github.com/kenmcmil/ivy/blob/master/ivy/ivy_lexer.py
 [p]: https://github.com/tpope/vim-pathogen
 [v]: https://github.com/gmarik/vundle
 [vp]: https://github.com/junegunn/vim-plug
