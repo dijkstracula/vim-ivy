@@ -164,6 +164,14 @@ syntax match ivyOperator "\v\="
 syntax match ivyOperator "\v\{"
 syntax match ivyOperator "\v\}"
 
+" For some reason, the following reserved words are treated as "polymorphic
+" symbols" in ivy/ivy_utils (along with a bunch of comparison operators).
+syntax keyword ivyOperator
+            \ bvand
+            \ bvor
+            \ bvnot
+            \ cast
+
 hi def link ivyOperator Operator
 
 
