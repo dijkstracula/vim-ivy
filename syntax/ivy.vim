@@ -1,5 +1,20 @@
-" Match typenames.
+" Match built-in typenames.
 syntax keyword ivyTypes bool int bv
+
+" Match some common datatypes from the `collections` package.
+syntax keyword ivyTypes 
+    \ array 
+    \ vector 
+    \ option 
+    \ map
+    \ partial_function
+    \ ordered_set
+    \ ordered_map
+    \ unbounded_queue
+
+" Match some common datatypes from the `number` package.
+syntax keyword ivyTypes uint nat
+
 hi def link ivyTypes Type
 
 " Match reserved words.
