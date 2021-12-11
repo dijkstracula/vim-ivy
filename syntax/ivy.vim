@@ -205,9 +205,17 @@ hi def link logicalVar Identifier
 "     'A quoted symbol is a possibly-empty sequence of characters enclosed in
 "     double quote characters (and not containing a double quote character).'
 " (As a result, we don't have to match for an escaped double-quote character.)
-syntax region quotedSymbol start=/\v"/ end=/\v"/
+syntax region quotedSymbol start=/"/ end=/"/
 highlight link quotedSymbol String
 
-" Native quote
-" TODO: Not sure yet how <<<...>>> is used.  At least we might want to be able
-" to fold them.
+" Native quoting allows for 'inlined-c++' within the region, and anything
+" enclosed in backticks is unquoted back into Ivy (at the highest precedence
+" level).  Thanks to `:help sh-embed` for the magic incantantions.
+
+" cpp.vim is, AFAIK, something I can assume is installed by default.
+syntax include @CPP syntax/cpp.vim
+syntax region nativeQuote matchgroup=nativeCode start=/<<</ end=/>>>/ contains=@CPP,nativeUnquote fold
+syntax region nativeUnquote matchgroup=nativeCode start=/`/ end=/`/  contained containedin=@CPP
+
+highlight link nativeUnquote Identifier
+highlight link nativeCode Type
