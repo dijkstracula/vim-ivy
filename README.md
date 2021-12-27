@@ -25,6 +25,18 @@ This is a Vim syntax plugin for the [IVy][ivy] language, styled after its
 
 TODO: actually test Pathogen install commands; they were stolen from elsewhere.
 
+## Bundling
+
+Typically, distribution via Git is prefered; however, for uploading to e.g.
+[vim.org][vimorg] it's useful to bundle the contents of the repository as a
+tarball as well.
+
+```
+$ git pull
+$ git archive -o ./vim-ivy.tar.gz HEAD
+$ scp vim-ivy.tar.gz ...
+```
+
 ## Contributing
 
 PRs welcome - this is definitely a work in progress.
@@ -39,4 +51,5 @@ details.
 [lexer]: https://github.com/kenmcmil/ivy/blob/master/ivy/ivy_lexer.py
 [p]: https://github.com/tpope/vim-pathogen
 [v]: https://github.com/gmarik/vundle
+[vimorg]: https://www.vim.org/scripts/script.php?script_id=5991
 [vp]: https://github.com/junegunn/vim-plug
