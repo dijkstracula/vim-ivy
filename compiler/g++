@@ -1,0 +1,3 @@
+#!/bin/bash
+#This is a dummy g++ for doit.sh.
+true

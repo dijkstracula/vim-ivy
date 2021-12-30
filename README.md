@@ -25,6 +25,18 @@ This is a Vim syntax plugin for the [IVy][ivy] language, styled after its
 
 TODO: actually test Pathogen install commands; they were stolen from elsewhere.
 
+## Syntax checking (beta!)
+
+To perform syntax checking on an open buffer, run `:make` on the Command Line.
+Or, to always check on save, add `autocmd BufWritePost *.ivy make` to your
+`.vimrc` file.  The QuickFix window will be populated with errors from `ivyc`.
+
+Note: this feature is currently experimental as it requires a bit of hacking
+around `ivyc`; for details, see [doit.sh][doit] and please file issues if you
+come across any.  Additionally, it's currently a synchronous operation, even in
+Vim 8 and NeoVim; hopefully Ivy 2 will expose an LSP that any editor can
+communicate with down the road.
+
 ## Bundling
 
 Typically, distribution via Git is prefered; however, for uploading to e.g.
@@ -46,6 +58,7 @@ PRs welcome - this is definitely a work in progress.
 Copyright (c) 2021 Nathan Taylor; licenced under MIT: See the LICENSE file for
 details.
 
+[doit]: https://github.com/dijkstracula/vim-ivy/blob/main/compiler/doit.sh
 [emacs]: https://github.com/kenmcmil/ivy/blob/master/lib/emacs/ivy-mode.el
 [ivy]: https://microsoft.github.io/ivy/
 [lexer]: https://github.com/kenmcmil/ivy/blob/master/ivy/ivy_lexer.py
