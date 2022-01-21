@@ -20,5 +20,4 @@ let s:path = expand('<sfile>:p:h') . '/doit.sh'
 execute 'CompilerSet makeprg=' .. s:path .. '\ ' .. expand('%:p')
 
 CompilerSet errorformat =%f(%l):\ error:\ %m
-CompilerSet errorformat+=\ line\ %l:\ error:\ %m
-
+CompilerSet errorformat+=%f:\ line\ %l:\ error:\ %m
