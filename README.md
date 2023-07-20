@@ -23,6 +23,11 @@ This is a Vim syntax plugin for the [IVy][ivy] language, styled after its
 1. Add `Plug 'dijkstracula/vim-ivy'` to your e.g. `~/.config/nvim/plugins.vim`
 2. Save and run `:PlugInstall`
 
+## Using [Packer.nvim](https://github.com/wbthomason/packer.nvim)
+
+1. Add `use 'dijkstracula/vim-ivy` to your `require('packer').startup` callback.
+2. Run `:PackerSync`
+
 TODO: actually test Pathogen install commands; they were stolen from elsewhere.
 
 ## Syntax checking (beta!)
